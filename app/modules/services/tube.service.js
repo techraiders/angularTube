@@ -14,7 +14,7 @@ tbApp.factory('tubeService', function($http){
         getVids: function () {
             
             //API key goes here
-            var APIkey ='';
+            var APIkey ='AIzaSyAhJS1hfMhd7JRDxU7GrQlCZ46oU3LdwpA';
             
             var fullURL = tubeURL + srch + '&type=video&&key=' + APIkey;
             
