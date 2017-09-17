@@ -10,38 +10,31 @@
         <link rel="stylesheet" href="app/styles/main.css">
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="node_modules/angular/angular.js"></script>
-        <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="app/modules/app.module.js"></script>
-        <script src="app/modules/search-bar/search.controller.js"></script>
-        <script src="app/modules/services/tube.service.js"></script>
-        <script src="app/modules/video-page/video.controller.js"></script>
-        <script src="app/modules/video-page/single.controller.js"></script>
+        <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/http.dev.js"></script>
+        <script src="node_modules/angular2/bundles/router.dev.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <base href="/"></base>
+
+        <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/modules/app.module')
+            .then(null, console.error.bind(console));
+        </script>
+
     </head>
     <body >
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <p>Angular Tube App</p>
-                    </a>
-                </div>
-                <form class="navbar-form navbar-left" role="search" ng-controller="search.controller"   >
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search for Videos" ng-model="srch">
-                    </div>
-                    <button type="submit" class="btn btn-default" ng-click="setSearch(srch)">Submit</button>
-                </form>
-            </div>
-        </nav>
-        
-        
-        
-        <div class="container-fluid">
-        
-        <ui-view></ui-view>
-    
-    
-        </div>
+           <my-app>Loading...</my-app>   
     </body>
 </html>

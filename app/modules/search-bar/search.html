@@ -1,0 +1,15 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <p>Angular Tube App</p>
+            </a>
+        </div>
+        <form class="navbar-form navbar-left" role="search" ng-controller="search.controller"   >
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search for Videos" ng-model="srch">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="setSearch(srch)">Submit</button>
+        </form>
+    </div>
+</nav>
