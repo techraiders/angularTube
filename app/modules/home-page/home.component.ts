@@ -1,7 +1,6 @@
 import {Component} from 'angular2/core';
 import {VideoComponent} from '../video-page/video.component';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-
+import {RouteConfig, ROUTER_DIRECTIVES, Router} from 'angular2/router';
 @Component({
 	selector: 'my-app',
 	templateUrl: 'app/modules/home-page/home.html'

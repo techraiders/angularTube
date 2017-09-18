@@ -4,4 +4,4 @@ import {Component} from 'angular2/core';
 	templateUrl: 'app/modules/video-page/video.html'
 })
 
-class VideoComponent {}
+export class VideoComponent {}
